@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper scissors Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-</html>
-<h1>rock Paper scissors Game</h1>
-<div class="choices">
-    <div class="choice" id="rock">
-        <img src="rock.png">
-    </div>
-        <div class="choice" id="scissors">
-            <img src="sisor3.png">
-        </div>
-            <div class="choice" id="paper">
-                <img src="paper3.png">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rock Paper Scissors Game</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gradient-to-br from-cyan-400 to-blue-700 h-screen p-8 grid place-items-center">
+        <section
+            class="ring-1 ring-zinc-50/30 flex flex-col items-center text-zinc-100 rounded-box p-4"
+        >
+            <h1 class="text-center font-bold underline font-mono text-2xl">
+                Rock Paper Scissors Game
+            </h1>
+            <div
+                class="choices flex items-center w-full justify-around [&>span]:scale-[200%] [&>span]:border [&>span]:border-zinc-200/30 [&>span]:p-2 [&>span]:rounded-lg py-10 active:[&>span]:scale-[150%] [&>span]:transition-all"
+            >
+                <span class="choice" id="rock"> 🤜 </span>
+                <span class="choice" id="scissors"> ✌️ </span>
+                <span class="choice" id="paper"> 🫱 </span>
             </div>
-</div>
+            <div
+                class="score-board flex items-center justify-around w-full gap-2 text-zinc-400 py-4 [&>div]:flex [&>div]:flex-col [&>div]:items-center [&>div]:bg-zinc-800 [&>div]:p-2 [&>div]:rounded-lg [&>div]:flex-1 [&>div>.number]:text-6xl"
+            >
+                <div class="score">
+                    <p class="number" id="user-score">0</p>
+                    <p>You</p>
+                </div>
+                <div class="score">
+                    <p class="number" id="comp-score">0</p>
+                    <p>Computer</p>
+                </div>
+            </div>
+            <div class="p-4 toast toast-center w-full text-center font-bold" id="msg">
+                Play Your Move
+            </div>
+        </section>
 
-<div class="score-board">
-    <div class="score">
-        <p id="user-score">0</p>
-        <p>you</p>
-    </div>
-    <div class="score">
-        <p id="comp-score">0</p>
-        <p>computer</p>
-    </div>
-</div>
-
-<div class="msg-container">
-    <p id="msg">play your move</p>
-</div>
-
-<script src="script.js"></script> 
-</body>
+        <script src="script.js"></script>
+    </body>
+</html>
